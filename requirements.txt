@@ -1,0 +1,4 @@
+-f /usr/share/pip-wheels
+Django==3.0
+pytz==2020.1
+

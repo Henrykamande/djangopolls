@@ -25,7 +25,7 @@ SECRET_KEY = '@mb(zao5w@z6g#in_e^&$=m2cv9&y##p-2n=wh!qgrkp@@6&^6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["henrykamande.pythonanywhere.com"]
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
+    'home.apps.HomeConfig',
+    'hello.apps.HelloConfig'
 ]
 
 MIDDLEWARE = [
