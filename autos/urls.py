@@ -26,5 +26,5 @@ urlpatterns = [
     path('lookup/', views.MakeView.as_view(), name='make_list'),
     path('lookup/<int:pk>/update/', views.MakeUpdate.as_view(), name='make_update'),
     path('lookup/<int:pk>/delete/', views.MakeDelete.as_view(), name='make_delete'),
-
+    path('lookup/create/', views.MakeCreate.as_view(), name='make_create'),
 ]
