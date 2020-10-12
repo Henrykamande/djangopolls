@@ -16,12 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
+from . import views
 
+app_name='autos'
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='home/main.html')),
-    path('polls/', include('polls.urls')),
-    path('admin/', admin.site.urls),
-    path('hello', include('hello.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),  
-    path('autos/', include('autos.urls', namespace='autos')),  
+    path('', views.MainView.as_view(), name='all' ),
+    path('main/<int:pk>/update/', views.AutoUpdate.as_view(), name='auto_update'),
+    path('main/<int:pk>/delete/', views.AutoDelete.as_view(), name='auto_delete'),
+    path('lookup/', views.MakeView.as_view(), name='make_list'),
+    path('lookup/<int:pk>/update/', views.MakeUpdate.as_view(), name='make_update'),
+    path('lookup/<int:pk>/delete/', views.MakeDelete.as_view(), name='make_delete'),
+
 ]
